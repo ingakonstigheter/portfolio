@@ -1,31 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My portfolio</title>
-</head>
-<header>
-    <a href="index.html">
-        <h1>Ali'z portfolio</h1>
-    </a>
-    <nav>
-        <ul>
-            <li><a href="#"></a>Projects</li>
-            <li><a href="#"></a>Skills</li>
-            <li><a href="#"></a>About</li>
-            <li><a href="#"></a>Contact</li>
-            <li><a href="#"></a>Resume</li>
-        </ul>
-    </nav>
-</header>
-<body>
-    <div class="hero">
-        <img src="" alt="">
-        <h2>Hi, I'm Ali, a Full-Stack Developer</h2>
-        <p></p>
-    </div>
-
-
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ali'z Home</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/style.css" />
+    </head>
+    <body>
+        <header>
+            <nav class="header__nav">
+                <a class="logo" href="index.html">
+                    <h1>Ali'z Portfolio</h1>
+                </a>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="html/projects.html">Projects</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="hero">
+                <img src="assets/img/hero_img.jpg" width="1000" height="500" alt="" />
+                <div class="hero__text">
+                    <h2>Hi, I'm Ali</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Reprehenderit dicta, obcaecati expedita ab illum et dolorum.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    </p>
+                </div>
+            </div>
+            <div class="container">
+                <section class="about">
+                    <h2>About Me</h2>
+                    <p>
+                        I'm a software engineer with a passion for building beautiful,
+                        functional, and user-friendly applications. I have experience in
+                        full-stack development, with a focus on front-end technologies.
+                        I'm always eager to learn new skills and technologies to enhance
+                        my abilities and contribute to innovative projects.
+                    </p>
+                </section>
+                <section class="skill">
+                    <h2>Skills</h2>
+                    <ul class="skills">
+                        <li>
+                            <p>HTML</p>
+                        </li>
+                        <li>
+                            <p>CSS</p>
+                        </li>
+                        <li>
+                            <p>JavaScript</p>
+                        </li>
+                        <li>
+                            <p>TypeScript</p>
+                        </li>
+                        <li>
+                            <p>JAVA</p>
+                        </li>
+                        <li>
+                            <p>Pyhton</p>
+                        </li>
+                    </ul>
+                </section>
+            </div>
+            <section class="projects">
+                <h2>Latest Projects</h2>
+                <ul class="carousel">
+                    <li>
+                        <article class="project-card">
+                            <img src="https://picsum.photos/id/11/200/100" alt="" />
+                            <h3>Lorem.</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <button>Show more</button>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="project-card">
+                            <img src="https://picsum.photos/id/12/200/100" alt="" />
+                            <h3>Lorem.</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <button>Show more</button>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="project-card">
+                            <img src="https://picsum.photos/id/13/200/100" alt="" />
+                            <h3>Lorem.</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <button>Show more</button>
+                        </article>
+                    </li>
+                    <li>
+                        <article class="project-card">
+                            <img src="https://picsum.photos/id/14/200/100" alt="" />
+                            <h3>Lorem.</h3>
+                            <p>Lorem ipsum dolor sit amet.</p>
+                            <button>Show more</button>
+                        </article>
+                    </li>
+                </ul>
+            </section>
+        </main>
+        <footer>
+            <p>@2025 Ali. All rights reserved.</p>
+        </footer>
+    </body>
 </html>

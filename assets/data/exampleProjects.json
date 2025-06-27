@@ -1,0 +1,48 @@
+[
+  {
+    "name": "Portfolio SPA",
+    "description": "En React-baserad en-sidesapp som visar projekt, kontaktinfo och erfarenhet.",
+    "techstack": ["React", "HTML", "CSS", "JavaScript"],
+    "difficulty": 3,
+    "estimated_time": "8–12h",
+    "features": [
+      "Routing mellan sektioner",
+      "Responsiv design",
+      "Projektfilter",
+      "Animerade övergångar"
+    ],
+    "img": "https://picsum.photos/id/11/200/100",
+    "demo_url": "https://dindemo.com/portfolio",
+    "github_url": "https://github.com/dittnamn/portfolio-spa"
+  },
+  {
+    "name": "REST API med Spring",
+    "description": "Ett backend-API för hantering av böcker med CRUD-funktionalitet.",
+    "techstack": ["Java", "Spring Boot", "Maven"],
+    "difficulty": 3,
+    "estimated_time": "8–10h",
+    "features": [
+      "Endpoints för GET/POST/PUT/DELETE",
+      "JSON-hantering",
+      "Enkel databasanslutning"
+    ],
+    "img": "https://picsum.photos/id/12/200/100",
+    "demo_url": null,
+    "github_url": "https://github.com/dittnamn/spring-book-api"
+  },
+  {
+    "name": "Web scraper + dashboard",
+    "description": "Ett Python-projekt som hämtar information från webben och visualiserar det.",
+    "techstack": ["Python", "BeautifulSoup", "Plotly", "Flask"],
+    "difficulty": 3,
+    "estimated_time": "6–10h",
+    "features": [
+      "Automatiserad datainsamling",
+      "Dashboard med diagram",
+      "Manuell uppdateringsknapp"
+    ],
+    "img": "https://picsum.photos/id/13/200/100",
+    "demo_url": "https://dindemo.com/web-scraper",
+    "github_url": "https://github.com/dittnamn/python-webscraper-dashboard"
+  }
+]

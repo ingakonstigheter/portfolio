@@ -188,7 +188,8 @@ main {
         position-area: center right;
     }
 
-    &::scroll-button(*):focus-visible {
+    &::scroll-button(*):focus-visible,
+    &::scroll-button(*):hover {
         color: var(--bg-secondary);
         background-color: var(--clr-secondary);
         cursor: pointer;
@@ -255,4 +256,31 @@ footer {
     justify-self: center;
     max-width: 1000px;
     color: var(--clr-secondary);
+}
+
+/* PROJECTS page*/
+
+.projects__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    @media (width > 800px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.project-card-fw {
+    @media (width > 800px) {
+        grid-template-columns: 1fr 1fr;
+        div {
+            grid-column: 1;
+            grid-row: 1;
+            padding: 2rem;
+            display: grid;
+            gap: 1em;
+        }
+        img {
+            grid-column: 2;
+        }
+    }
 }

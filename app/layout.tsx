@@ -38,13 +38,13 @@ export default function RootLayout({
           'antialiased min-h-dvh grid grid-rows-[auto_1fr_auto] md:grid-cols-[1fr_3fr] bg-gray-950 text-white'
         }>
         <header className="md:h-dvh md:sticky md:top-0 border-r-2 border-white-400">
-          <nav className="grid grid-flow-col md:grid-rows-5 md:min-h-dvh text-3xl">
+          <nav className="grid grid-flow-col md:grid-rows-5 md:min-h-dvh text-xl">
             <Link
               href={'/'}
               className="col-span-2 w-fit md:w-full md:text-left py-10 px-4 content-center">
-              <h1 className="text-center">Ali Zaifie</h1>
+              <h1 className="text-center md:w-fit md:m-auto">Ali Zaifie</h1>
             </Link>
-            <ul className="col-span-4 grid grid-flow-col md:row-span-4 md:grid-flow-row justify-around">
+            <ul className="col-span-4 grid grid-flow-col md:row-span-3 md:grid-flow-row justify-around">
               {navLinks.map((link: { href: string; label: string }, index) => (
                 <li key={index} className="grid">
                   <Link

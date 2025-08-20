@@ -25,8 +25,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-
-
+const navLinks = [
+  {href: "/", label: "Home"},
+  {href: "/projects", label: "Projects"},
+  {href: "/about", label: "About Me"},
+  {href: "/contact", label: "Contact"}
+]
 
   return (
     <html lang="en">
@@ -34,20 +38,14 @@ export default function RootLayout({
         className={"antialiased"}
       >
         <header>
-          <nav className="grid justify-end">
-            <ul className="flex gap-4 m-4">
-              <li>
-                <Link href={"/"}>Home</Link>
+          <nav className="grid grid-flow-col text-2xl">
+            <Link href={"/"} className="p-4"><h1>Ali Zaifie</h1></Link>
+            <ul className="grid grid-flow-col justify-around">
+              {navLinks.map((link: {href: string, label: string}, index) => 
+              <li key={index} className="grid">
+                <Link className={`self-center text-center ${poppins.variable}`} href={link.href}>{link.label}</Link>
               </li>
-              <li>
-                <Link href={"/projects"}>Projects</Link>
-              </li>
-              <li>
-                <Link href={"/about"}>About me</Link>
-              </li>
-              <li>
-                <Link href={"/contact"}>Contact</Link>
-              </li>
+              )}
             </ul>
           </nav>
         </header>

@@ -3,23 +3,9 @@
 :root {
   --font-sans: 'Inter', sans-serif;
   --font-heading: 'Poppins', sans-serif;
-
-  --color-primary: #3B82F6;
-  --color-primary-dark: #2563EB;
-  --color-secondary: #10B981;
-  --color-secondary-dark: #059669;
-  --color-background: #F9FAFB;
-  --color-text: #111827;
-  --color-text-secondary: #6B7280;
-  --color-border: #E5E7EB;
-
-  --shadow-card: 0 2px 6px rgba(0, 0, 0, 0.08);
-  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.12);
 }
 
 body {
-  background: var(--color-background);
-  color: var(--color-text);
   font-family: Arial, Helvetica, sans-serif;
 }
 

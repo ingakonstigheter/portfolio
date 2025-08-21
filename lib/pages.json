@@ -1,0 +1,8 @@
+{
+  "pages": [
+    { "icon": "home", "href": "/", "label": "Home" },
+    { "icon": "briefcaseBusiness", "href": "/projects", "label": "Projects" },
+    { "icon": "user", "href": "/", "label": "About Me" },
+    { "icon": "mail", "href": "/contact", "label": "Contact" }
+  ]
+}

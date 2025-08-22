@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
-import data from "@/lib/pages.json";
+import LinkList from "@/components/link-list";
+import PersonalCard from "@/components/personal-card";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -29,47 +30,25 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={
-          "antialiased min-h-dvh grid grid-rows-[auto_1fr_auto] md:grid-cols-[1fr_3fr] bg-gray-950 text-white"
-        }>
-        <header className="md:h-dvh md:sticky md:top-0 border-r-2 border-white-400">
-          <nav className="grid grid-flow-col md:grid-rows-5 md:min-h-dvh text-xl">
-            <Link
-              href={"/"}
-              className="col-span-2 w-fit md:w-full md:text-left py-10 px-4 content-center">
-              <h1 className="text-center md:w-fit md:m-auto">
-                Ali z portfolio
-              </h1>
-            </Link>
-            <ul className="col-span-4 grid grid-flow-col md:row-span-3 md:grid-flow-row justify-around">
-              {data.pages.map(
-                (link: { href: string; label: string }, index) => (
-                  <li key={index} className="grid">
-                    <Link
-                      className={`py-10 self-center text-center  mw:w-full md:text-left ${poppins.variable}`}
-                      href={link.href}>
-                      {link.label}
-                    </Link>
-                  </li>
-                )
-              )}
-            </ul>
+          "grid min-h-dvh grid-rows-[auto_1fr_auto] bg-gray-950 text-white antialiased md:grid-cols-[1fr_3fr]"
+        }
+      >
+        <header className="border-white-400 border-r-2 md:sticky md:top-0 md:h-dvh">
+          <nav className="grid grid-cols-[1fr_3fr] bg-blue-200 md:min-h-dvh md:grid-cols-1 md:grid-rows-[1fr_4fr] md:text-xl">
+            <div className="flex justify-center bg-amber-800">
+              <PersonalCard></PersonalCard>
+              <Link href={"/"} className="md:hidden">
+                <p className="m-4">{`My Portfolio`}</p>
+              </Link>
+            </div>
+            <LinkList className="bg-red-400"></LinkList>
           </nav>
         </header>
         <div className="">{children}</div>
-        <footer>
-          <nav className="grid grid-auto-col md:hidden">
-            <ul className="col-span-4 grid grid-flow-col justify-around">
-              {data.pages.map(
-                (link: { href: string; label: string }, index) => (
-                  <li key={index} className="grid">
-                    <Link
-                      className={`py-10 self-center text-center ${poppins.variable}`}
-                      href={link.href}>
-                      {link.label}
-                    </Link>
-                  </li>
-                )
-              )}
+        <footer className="border-t-2 md:hidden">
+          <nav>
+            <ul className="grid grid-flow-col justify-center">
+              <LinkList></LinkList>
             </ul>
           </nav>
         </footer>

@@ -1,4 +1,4 @@
-import { type LucideProps } from "lucide-react";
+import { Mail, type LucideProps } from "lucide-react";
 import { User, BriefcaseBusiness, Home, Menu } from "lucide-react";
 
 interface IconProps extends LucideProps {
@@ -9,7 +9,8 @@ const icons = {
   user: User,
   briefcaseBusiness: BriefcaseBusiness,
   home: Home,
-  menu: Menu
+  menu: Menu,
+  mail: Mail
 }
 
 const Icon = ({ name, color, size, className, ...props }: IconProps) => {

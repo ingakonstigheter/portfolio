@@ -2,7 +2,7 @@
   "pages": [
     { "icon": "home", "href": "/", "label": "Home" },
     { "icon": "briefcaseBusiness", "href": "/projects", "label": "Projects" },
-    { "icon": "user", "href": "/", "label": "About Me" },
+    { "icon": "user", "href": "/about", "label": "About" },
     { "icon": "mail", "href": "/contact", "label": "Contact" }
   ]
 }

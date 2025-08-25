@@ -1,4 +1,6 @@
-import Article from "@/components/article-presetation";
+import Bento from "@/components/bento";
+import CarouselPreview from "@/components/carousel-preview";
+import Image from "next/image";
 
 const presentation = {
   headline: "Hi, I'm Ali",
@@ -7,11 +9,39 @@ const presentation = {
 
 export default function Home() {
   return (
-    <section className="grid place-items-center md:m-8 md:place-items-start">
-      <div className="mt-10 grid max-w-4/6 gap-4 text-center md:max-w-100 md:text-left">
-        <h1 className="text-2xl">{presentation.headline}</h1>
-        <p className="">{presentation.para}</p>
+    <>
+      <div className="grid text-center md:mt-4 md:grid-cols-3 md:grid-rows-2 md:text-left">
+        <div className="md:col-span-3">
+          <Bento>
+            <h1 className="text-left text-4xl font-extrabold tracking-tight text-balance">
+              {presentation.headline}
+            </h1>
+            <p className="text-justify text-lg md:text-left">
+              {presentation.para}
+            </p>
+          </Bento>
+        </div>
       </div>
-    </section>
+      <div className="col-start-2 hidden justify-center md:flex">
+        <Bento>
+          <figure>
+            <Image
+              src={"/person.jpg"}
+              alt={""}
+              width={400}
+              height={700}
+            ></Image>
+          </figure>
+        </Bento>
+      </div>
+      <article className="grid justify-center md:col-start-1 md:row-start-2 md:justify-start">
+        <Bento>
+          <h1 className="text-left text-4xl font-extrabold tracking-tight text-balance">
+            Check out my latest projects
+          </h1>
+          <CarouselPreview></CarouselPreview>
+        </Bento>
+      </article>
+    </>
   );
 }

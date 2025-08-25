@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { Poppins } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import LinkList from "@/components/link-list";
 import PersonalCard from "@/components/personal-card";
+import Bento from "@/components/bento";
 
 const poppins = Poppins({
   weight: ["400", "500", "600", "700"],
@@ -11,10 +12,10 @@ const poppins = Poppins({
   subsets: ["latin"],
 });
 
-/* const inter = Inter({
+const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-}); */
+});
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -30,28 +31,21 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={
-          "grid min-h-dvh grid-rows-[auto_1fr_auto] bg-gray-950 text-white antialiased md:grid-cols-[1fr_3fr]"
+          "bg-background text-foreground grid min-h-dvh grid-rows-[auto_1fr] antialiased md:grid-cols-[1fr_4fr]"
         }
       >
-        <header className="border-white-400 border-r-2 md:sticky md:top-0 md:h-dvh">
-          <nav className="grid grid-cols-[1fr_3fr] bg-blue-200 md:min-h-dvh md:grid-cols-1 md:grid-rows-[1fr_4fr] md:text-xl">
-            <div className="flex justify-center bg-amber-800">
+        <header className="md:sticky md:top-0 md:p-8">
+          <nav className="grid max-w-full grid-cols-[1fr_2fr] md:mt-4 md:max-h-dvh md:grid-cols-1 md:grid-rows-[1fr_2fr] md:gap-4">
+            <div className="hidden md:grid">
               <PersonalCard></PersonalCard>
-              <Link href={"/"} className="md:hidden">
-                <p className="m-4">{`My Portfolio`}</p>
-              </Link>
             </div>
-            <LinkList className="bg-red-400"></LinkList>
+            <Link href={"/"} className="m-4 text-nowrap md:hidden">
+              My Portfolio
+            </Link>
+            <LinkList></LinkList>
           </nav>
         </header>
-        <div className="">{children}</div>
-        <footer className="border-t-2 md:hidden">
-          <nav>
-            <ul className="grid grid-flow-col justify-center">
-              <LinkList></LinkList>
-            </ul>
-          </nav>
-        </footer>
+        <div className="grid">{children}</div>
       </body>
     </html>
   );

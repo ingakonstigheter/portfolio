@@ -7,35 +7,23 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import Image from "next/image";
+import { getAllProjects } from "@/lib/data/projects";
 
 function CarouselPreview() {
+  const projects = getAllProjects();
   return (
     <Carousel className="m-auto max-w-[400px]">
       <CarouselContent className="">
-        <CarouselItem className="">
-          <Image
-            src={"https://picsum.photos/id/1/400"}
-            alt={""}
-            width={400}
-            height={400}
-          ></Image>
-        </CarouselItem>
-        <CarouselItem className="">
-          <Image
-            src={"https://picsum.photos/id/2/400"}
-            alt={""}
-            width={400}
-            height={400}
-          ></Image>
-        </CarouselItem>
-        <CarouselItem className="">
-          <Image
-            src={"https://picsum.photos/id/3/400"}
-            alt={""}
-            width={400}
-            height={400}
-          ></Image>
-        </CarouselItem>
+        {projects.map((project, index) => (
+          <CarouselItem key={index}>
+            <Image
+              src={project.images[0]}
+              alt={""}
+              width={400}
+              height={400}
+            ></Image>
+          </CarouselItem>
+        ))}
       </CarouselContent>
       <CarouselPrevious />
       <CarouselNext />

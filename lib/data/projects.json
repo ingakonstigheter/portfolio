@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Pokemon Project",
+    "intro": "A demo Pokédex built with Next.js and Tailwind CSS, using the PokéAPI to fetch and display Pokémon data. Features include search functionality and a responsive UI, showcasing API integration and modern frontend development skills.",
+    "description": "This project is a demo Pokédex built with Next.js, integrating the REST-based PokéAPI to fetch and display Pokémon data. It allows users to search and browse Pokémon, presenting key details in a clean and responsive interface styled with modern frontend tools. Designed as a school project, it showcases my ability to work with external APIs, manage dynamic data, and build user-friendly applications using Next.js and Tailwind CSS.",
+    "tags": ["NextJS", "Tailwind", "REST API"],
+    "link": "https://github.com/ingakonstigheter/nextjs_uppgift-pokedex",
+    "demo": "github demo",
+    "images": [
+      "/pokemon/pokemon-main.png",
+      "/pokemon/pokemon-pokedex.png",
+      "/pokemon/pokemon-filtered.png"
+    ]
+  }
+]

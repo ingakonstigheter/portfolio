@@ -1,15 +1,15 @@
-import Card from "@/components/card";
-import { fetchAllProjects } from "@/lib/data/project";
-import { Post } from "@/lib/interfaces";
+import ProjectCard from "@/components/project-card";
+import { getAllProjects } from "@/lib/data/projects";
+import { Project } from "@/lib/types";
 import React, { Suspense } from "react";
 
 async function ProjectsList() {
-  const posts = await fetchAllProjects();
+  const posts = getAllProjects();
 
   return (
     <>
-      {posts.map((post: Post, index) => (
-        <Card key={index} post={post} />
+      {posts.map((post: Project, index) => (
+        <ProjectCard key={index} project={post} />
       ))}
     </>
   );

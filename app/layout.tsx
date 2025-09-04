@@ -31,11 +31,11 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={
-          "bg-background text-foreground grid min-h-dvh grid-rows-[auto_1fr] antialiased md:grid-cols-[1fr_4fr]"
+          "bg-background text-foreground grid max-h-dvh grid-rows-[auto_1fr] overflow-clip antialiased md:grid-cols-[300px_4fr] md:gap-10"
         }
       >
-        <header className="md:sticky md:top-0 md:p-8">
-          <nav className="grid max-w-full grid-cols-[1fr_2fr] md:mt-4 md:max-h-dvh md:grid-cols-1 md:grid-rows-[1fr_2fr] md:gap-4">
+        <header className="md:sticky md:top-0">
+          <nav className="grid max-w-full grid-cols-[300px_auto] border-r-2 md:mt-4 md:h-dvh md:max-h-dvh md:grid-cols-1 md:grid-rows-[1fr_2fr] md:gap-4">
             <div className="hidden md:grid">
               <PersonalCard></PersonalCard>
             </div>
@@ -45,7 +45,7 @@ export default function RootLayout({
             <LinkList></LinkList>
           </nav>
         </header>
-        <div className="grid">{children}</div>
+        <div className="grid max-h-dvh overflow-auto">{children}</div>
       </body>
     </html>
   );

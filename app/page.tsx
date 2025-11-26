@@ -2,8 +2,12 @@ import { Github, LucideLinkedin, Mail, User } from "lucide-react";
 import React from "react";
 import text from "../lib/textEN.json";
 import Link from "next/link";
+import ProjectList from "./components/project-list";
+import { getProjectsFromFile, type Project } from "@/lib/project-data";
 
 export default function Home() {
+  const projects = getProjectsFromFile();
+
   return (
     <main
       className="grid mx-auto justify-center max-w-2xl"
@@ -28,8 +32,9 @@ export default function Home() {
         </h2>
         <p>{text.about.about}</p>
       </section>
-      <section>
+      <section style={{ gap: "var(--size-2xl)" }} className="grid">
         <h2>My Projects</h2>
+        <ProjectList projects={projects} />
       </section>
     </main>
   );

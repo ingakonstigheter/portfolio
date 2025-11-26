@@ -1,0 +1,21 @@
+{
+  "home": {
+    "welcome": "Hey, i'm Ali",
+    "nav": [
+      { "title": "About Me", "path": "/about" },
+      { "title": "Projects", "path": "/projects" }
+    ]
+  },
+  "about": {
+    "about": "I have a interest in IT and economics. I enjoy analyzing problems, creating digital solutions, and understanding how technology and business are connected."
+  },
+  "projects": {
+    "id": "pokedex",
+    "title": "Pokedex",
+    "description": "My first Next.js project where I focused on API handling and learning the core features of Next.js.",
+    "tech": ["Next.js", "React", "TypeScript", "PokéAPI"],
+    "image": "/images/projects/pokedex.png",
+    "github": "https://github.com/ali/pokedex",
+    "demo": "https://ali.github.io/pokedex"
+  }
+}

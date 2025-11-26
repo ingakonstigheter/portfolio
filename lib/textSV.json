@@ -1,0 +1,21 @@
+{
+  "home": {
+    "welcome": "Hej, jag är Ali",
+    "nav": [
+      { "title": "Om mig", "path": "/about" },
+      { "title": "Mina Projekt", "path": "/projects" }
+    ]
+  },
+  "about": {
+    "about": "Jag har ett brett intresse för IT, systemutveckling och ekonomi. Jag gillar att analysera problem, skapa digitala lösningar och förstå hur teknik och affärer hänger ihop."
+  },
+  "projects": {
+    "id": "pokedex",
+    "title": "Pokedex",
+    "description": "Mitt första Next.js-projekt där jag fokuserade på API-hantering och att lära mig Next.js grundläggande funktioner.",
+    "tech": ["Next.js", "React", "TypeScript", "PokéAPI"],
+    "image": "/images/projects/pokedex.png",
+    "github": "https://github.com/ali/pokedex",
+    "demo": "https://ali.github.io/pokedex"
+  }
+}

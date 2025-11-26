@@ -49,8 +49,8 @@ export default function AdminPage() {
             style={{
               display: "block",
               marginBottom: "var(--size-sm)",
+              fontSize: "var(--font-size-base)",
               fontWeight: "500",
-              color: "var(--color-text-primary)",
             }}>
             Title
           </label>
@@ -66,8 +66,8 @@ export default function AdminPage() {
             style={{
               display: "block",
               marginBottom: "var(--size-sm)",
+              fontSize: "var(--font-size-base)",
               fontWeight: "500",
-              color: "var(--color-text-primary)",
             }}>
             Description
           </label>
@@ -87,8 +87,8 @@ export default function AdminPage() {
             style={{
               display: "block",
               marginBottom: "var(--size-sm)",
+              fontSize: "var(--font-size-base)",
               fontWeight: "500",
-              color: "var(--color-text-primary)",
             }}>
             Image
           </label>

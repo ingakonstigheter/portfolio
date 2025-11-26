@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { writeFile, mkdir, readFile } from "fs/promises";
+import { writeFile, mkdir } from "fs/promises";
 import path from "path";
+import { createProject } from "@/lib/project-data";
 
 export const POST = async (req: NextRequest) => {
   const formData = await req.formData();
@@ -21,23 +22,19 @@ export const POST = async (req: NextRequest) => {
   const imagePath = path.join(uploadDir, imageName);
   await writeFile(imagePath, buffer);
 
-  // Save project data to lib/projects.json
-  const projectsFile = path.join(process.cwd(), "lib", "projects.json");
-  let projects = [];
-  try {
-    const file = await readFile(projectsFile, "utf-8");
-    projects = JSON.parse(file);
-  } catch {}
-  projects.push({
+  // Save project data to database using Prisma
+  const project = await createProject({
     title,
     description,
     image: `/uploads/${imageName}`,
-    createdAt: new Date().toISOString(),
   });
-  await writeFile(projectsFile, JSON.stringify(projects, null, 2));
 
-  return NextResponse.json({
-    message: "Project uploaded successfully!",
-    success: true,
-  });
+  if (!project) {
+    return NextResponse.json(
+      { message: "Failed to save project to database." },
+      { status: 500 }
+    );
+  }
+
+  return NextResponse.json({ message: "Project uploaded successfully!" });
 };

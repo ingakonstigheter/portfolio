@@ -1,43 +1,144 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /* Light Mode Colors */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f5f5f5;
+  --color-bg-tertiary: #e8e8e8;
+  --color-text-primary: #171717;
+  --color-text-secondary: #666666;
+  --color-text-tertiary: #999999;
+  --color-border: #d0d0d0;
+  --color-accent: #0070f3;
+  --color-accent-hover: #0051cc;
+  --color-success: #10b981;
+  --color-error: #ef4444;
+  --color-warning: #f59e0b;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Sizes */
+  --size-xs: 0.5rem;
+  --size-sm: 0.75rem;
+  --size-md: 1rem;
+  --size-lg: 1.5rem;
+  --size-xl: 2rem;
+  --size-2xl: 3rem;
+  --size-3xl: 4rem;
+  --size-4xl: 6rem;
+
+  /* Font Sizes */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Dark Mode Colors */
+    --color-bg-primary: #0a0a0a;
+    --color-bg-secondary: #1a1a1a;
+    --color-bg-tertiary: #2a2a2a;
+    --color-text-primary: #ededed;
+    --color-text-secondary: #b0b0b0;
+    --color-text-tertiary: #808080;
+    --color-border: #404040;
+    --color-accent: #0070f3;
+    --color-accent-hover: #0055d4;
+    --color-success: #10b981;
+    --color-error: #ef4444;
+    --color-warning: #f59e0b;
   }
 }
 
+/* @theme inline {
+  --color-background: var(--color-bg-primary);
+  --color-foreground: var(--color-text-primary);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+} */
+
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 :is(h1, h2, h3) {
-  @apply font-bold font-sans;
+  font-weight: bold;
+  color: var(--color-text-primary);
 }
+
 h1 {
-  @apply text-4xl;
+  font-size: var(--font-size-5xl);
 }
+
 h2 {
-  @apply text-2xl;
+  font-size: var(--font-size-3xl);
 }
+
 h3 {
-  @apply text-xl;
+  font-size: var(--font-size-2xl);
 }
+
 nav,
 p {
-  @apply font-mono text-lg;
+  font-size: var(--font-size-lg);
+  color: var(--color-text-secondary);
+}
+
+input,
+textarea,
+select {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  padding: var(--size-md);
+  border-radius: 0.5rem;
+  font-size: var(--font-size-base);
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.1);
+}
+
+button {
+  background-color: var(--color-accent);
+  color: white;
+  padding: var(--size-md) var(--size-lg);
+  border-radius: 0.5rem;
+  font-size: var(--font-size-base);
+  cursor: pointer;
+  border: none;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+  background-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: var(--color-accent-hover);
+  text-decoration: underline;
 }

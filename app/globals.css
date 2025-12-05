@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --background-primary: #0c2339;
+  --background-secondary: #0c2339;
+  --background-accent: #13822f;
+  --grid-line: #f0f1f9;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-bg-primary: var(--background-primary);
+  --color-bg-secondary: var(--background-secondary);
+  --grid: var(--grid-line);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #020618;
+    --foreground: #fafafa;
+    --background-secondary: #0c2339;
+    --background-primary: #0a1122;
+    --background-accent: #13822f;
+
+    --grid-line: #050339;
+  }
+}
+
+body {
+  background: var(--background);
+  background-image: linear-gradient(90deg, var(--grid) 1px, transparent 1px),
+    linear-gradient(var(--grid) 1px, transparent 1px);
+  background-size: 128px 128px;
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--foreground);
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.moving-gradient {
+  background: linear-gradient(45deg, #60a5fa, #34d399);
+  background-size: 400% auto;
+  animation: gradient-shift 4s ease infinite;
+}
+
+nav {
+  color: white;
+  background-color: var(--background-secondary);
+}

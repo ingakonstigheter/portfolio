@@ -44,6 +44,14 @@ p {
   line-height: 1.6;
   color: var(--foreground);
 }
+.gradient-text {
+  background: linear-gradient(90deg, #60a5fa, #34d399, #60a5fa);
+  background-size: 200% auto;
+  animation: gradient-shift 4s linear infinite;
+  background-clip: text;
+  color: transparent;
+}
+
 @keyframes gradient-shift {
   0% {
     background-position: 0% 50%;

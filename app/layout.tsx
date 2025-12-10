@@ -1,5 +1,18 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Space_Grotesk, Inter, Outfit, Syne, Poppins, Quicksand, Comfortaa, Nunito, Varela_Round, Rubik } from "next/font/google";
+import {
+  Geist,
+  Geist_Mono,
+  Space_Grotesk,
+  Inter,
+  Outfit,
+  Syne,
+  Poppins,
+  Quicksand,
+  Comfortaa,
+  Nunito,
+  Varela_Round,
+  Rubik,
+} from "next/font/google";
 import "./globals.css";
 import Navbar from "./components/navbar";
 import AmbientBackground from "./components/ambient-background";
@@ -79,10 +92,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} ${inter.variable} ${outfit.variable} ${syne.variable} ${poppins.variable} ${quicksand.variable} ${comfortaa.variable} ${nunito.variable} ${varelaRound.variable} ${rubik.variable} antialiased md:px-4 px-0`}>
+        className={`${geistSans.variable} ${geistMono.variable} ${spaceGrotesk.variable} ${inter.variable} ${outfit.variable} ${syne.variable} ${poppins.variable} ${quicksand.variable} ${comfortaa.variable} ${nunito.variable} ${varelaRound.variable} ${rubik.variable} antialiased md:px-4 px-0 min-h-full`}>
         <AmbientBackground />
         <Navbar />
-        <main className="mx-auto min-h-full pt-24 px-8 md:pt-4 md:min-px-16">
+        <main className="mx-auto max-w-7xl pt-24 px-8 md:min-px-16">
           {children}
         </main>
       </body>

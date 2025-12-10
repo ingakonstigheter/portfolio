@@ -17,6 +17,16 @@
   --grid: var(--grid-line);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-space-grotesk: var(--font-space-grotesk);
+  --font-inter: var(--font-inter);
+  --font-outfit: var(--font-outfit);
+  --font-syne: var(--font-syne);
+  --font-poppins: var(--font-poppins);
+  --font-quicksand: var(--font-quicksand);
+  --font-comfortaa: var(--font-comfortaa);
+  --font-nunito: var(--font-nunito);
+  --font-varela-round: var(--font-varela-round);
+  --font-rubik: var(--font-rubik);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -36,7 +46,7 @@ body {
     linear-gradient(var(--grid) 1px, transparent 1px);
   background-size: 68px 68px;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-quicksand), Arial, Helvetica, sans-serif;
   color: var(--foreground);
 }
 p {
@@ -73,6 +83,7 @@ nav {
   color: white;
   background-color: var(--background-secondary);
 }
+
 .shadow-glow {
   box-shadow: 0 0 20px rgba(52, 211, 153, 0.6);
 }
@@ -100,4 +111,3 @@ a:focus-visible {
   outline: 4px solid #d6700a;
   outline-offset: 4px;
 }
-

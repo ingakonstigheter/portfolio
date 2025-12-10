@@ -1,10 +1,10 @@
 import { createHighlighter, Highlighter } from "shiki";
 
-let highlighter: Highlighter | null = null;
+let highlighterPromise: Promise<Highlighter> | null = null;
 
 export async function getShikiHighlighter(): Promise<Highlighter> {
-  if (!highlighter) {
-    highlighter = await createHighlighter({
+  if (!highlighterPromise) {
+    highlighterPromise = createHighlighter({
       themes: ["tokyo-night"],
       langs: [
         "javascript",
@@ -18,7 +18,7 @@ export async function getShikiHighlighter(): Promise<Highlighter> {
       ],
     });
   }
-  return highlighter;
+  return highlighterPromise;
 }
 
 export async function highlightCode(

@@ -1,5 +1,4 @@
 import CodeWindow from "./code-window";
-import { TypewriterText } from "./typewriter-text";
 
 export default function Hero() {
   const name = "Ali Zaifie";
@@ -14,7 +13,7 @@ export default function Hero() {
   return (
     <div className="grid gap-8 lg:gap-4 lg:mt-8 mt-4 lg:grid-flow-col items-center mx-auto">
       <div className="grid items-center lg:text-left md:gap-8 gap-4">
-        <h1 className="text-8xl font-bold md:mx-auto">
+        <h1 className="text-8xl font-bold md:mx-auto ">
           <span className="text-9xl font-extrabold block">Hello</span>
           I'm
           <span className="gradient-text"> {name}</span>
